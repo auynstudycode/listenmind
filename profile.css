@@ -1,0 +1,116 @@
+/* ===================================================================
+   ListenMind — Hồ sơ (Profile dashboard, redesign)
+   =================================================================== */
+.lm-pf{display:flex;flex-direction:column;gap:16px;}
+
+/* ---------- header ---------- */
+.lm-pf-card{overflow:hidden;position:relative;}
+.lm-pf-cover{height:150px;position:relative;
+  background:linear-gradient(115deg,var(--teal-400) 0%,#79B4E6 52%,var(--lav-300) 100%);}
+.lm-pf-cover::after{content:'';position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 85% 10%,rgba(255,255,255,.28),transparent 55%);}
+.lm-pf-avatar{position:absolute;left:28px;top:92px;z-index:2;border-radius:50%;background:var(--paper);padding:4px;box-shadow:var(--sh-md);}
+.lm-pf-body{display:flex;align-items:center;gap:22px;padding:18px 28px 22px 168px;min-height:78px;}
+.lm-pf-idblock{flex:1;min-width:0;}
+.lm-pf-name{font-size:27px;color:var(--ink-900);line-height:1.1;}
+.lm-pf-email{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:var(--ink-500);font-weight:600;margin-top:6px;}
+.lm-pf-email svg{color:var(--ink-400);}
+.lm-pf-badges{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;}
+.lm-pfbadge{height:30px;display:inline-flex;align-items:center;gap:6px;padding:0 13px;border-radius:var(--r-pill);font-size:12.5px;font-weight:700;white-space:nowrap;}
+.lm-pfbadge.teal{background:var(--teal-100);color:var(--teal-700);}
+.lm-pfbadge.gray{background:var(--ink-100);color:var(--ink-600);}
+.lm-pfbadge.lav{background:var(--lav-100);color:var(--lav-600);}
+.lm-pfbadge.amber{background:var(--amber-100);color:var(--coral-500);}
+.lm-pf-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;padding-bottom:4px;}
+
+.lm-pf-edit-av{display:flex;align-items:center;gap:14px;}
+
+/* ---------- stats ---------- */
+.lm-pf-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.lm-pfstat{display:flex;align-items:center;gap:14px;padding:18px;transition:transform .16s,box-shadow .16s,border-color .16s;border:1.5px solid var(--ink-100);}
+.lm-pfstat:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:var(--teal-200);}
+.lm-pfstat-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;}
+.tone-teal .lm-pfstat-ic{background:var(--teal-600);}
+.tone-coral .lm-pfstat-ic{background:var(--coral-500);}
+.tone-lav .lm-pfstat-ic{background:var(--lav-500);}
+.tone-ok .lm-pfstat-ic{background:var(--ok-500);}
+.lm-pfstat-v{font-size:26px;color:var(--ink-900);line-height:1;}
+.lm-pfstat-l{font-size:13px;color:var(--ink-700);font-weight:700;margin-top:4px;}
+.lm-pfstat-micro{font-size:11.5px;color:var(--ink-400);font-weight:600;margin-top:2px;}
+
+/* ---------- progress + quick ---------- */
+.lm-pf-row1{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;}
+.lm-pfprog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.lm-pfprog-big{font-size:32px;color:var(--ink-900);line-height:1;}
+.lm-pfprog-big span{font-size:16px;color:var(--ink-400);font-weight:600;}
+.lm-pfprog-sub{font-size:13px;color:var(--ink-500);font-weight:600;margin-top:6px;}
+.lm-pfprog-ring{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.lm-pfprog-ring::before{content:'';position:absolute;inset:6px;border-radius:50%;background:var(--paper);}
+.lm-pfprog-ring span{position:relative;font-size:15px;font-weight:800;color:var(--teal-700);font-family:var(--font-display);}
+.lm-pfprog-foot{display:flex;align-items:center;gap:18px;margin-top:14px;font-size:12.5px;color:var(--ink-500);font-weight:600;}
+.lm-pfprog-foot b{color:var(--ink-800);font-size:15px;margin-right:3px;}
+.lm-pfprog-foot .lm-link{margin-left:auto;}
+
+.lm-quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.lm-quick-btn{display:flex;align-items:center;gap:11px;padding:14px;border-radius:var(--r-md);border:1.5px solid var(--ink-200);background:var(--paper);text-align:left;transition:.15s;}
+.lm-quick-btn:hover{border-color:var(--teal-300);background:var(--teal-50);transform:translateY(-2px);}
+.lm-quick-ic{width:38px;height:38px;border-radius:11px;background:var(--teal-100);color:var(--teal-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lm-quick-l{font-size:14px;font-weight:800;color:var(--ink-900);}
+.lm-quick-sub{font-size:11.5px;color:var(--ink-500);font-weight:600;margin-top:1px;}
+.lm-quick-btn.primary{background:var(--teal-600);border-color:var(--teal-600);}
+.lm-quick-btn.primary:hover{background:var(--teal-700);}
+.lm-quick-btn.primary .lm-quick-ic{background:rgba(255,255,255,.2);color:#fff;}
+.lm-quick-btn.primary .lm-quick-l{color:#fff;}
+.lm-quick-btn.primary .lm-quick-sub{color:rgba(255,255,255,.8);}
+
+/* ---------- history + vocab ---------- */
+.lm-pf-row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.lm-pfhist-list{display:flex;flex-direction:column;gap:4px;}
+.lm-pfhist{display:flex;align-items:center;gap:12px;padding:11px 10px;border-radius:12px;text-align:left;transition:.14s;}
+.lm-pfhist:hover{background:var(--teal-50);}
+.lm-pfhist-ic{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;}
+.lm-pfhist-ic.practice{background:var(--teal-500);}
+.lm-pfhist-ic.exam{background:var(--lav-500);}
+.lm-pfhist-main{flex:1;min-width:0;}
+.lm-pfhist-t{font-size:14px;font-weight:700;color:var(--ink-900);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.lm-pfhist-meta{font-size:12px;color:var(--ink-500);font-weight:600;margin-top:1px;}
+.lm-pfhist-score{font-size:13px;font-weight:800;padding:4px 10px;border-radius:99px;white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;}
+.lm-pfhist-score.good{background:var(--ok-100);color:var(--ok-500);}
+.lm-pfhist-score.warn{background:var(--warn-100);color:var(--warn-500);}
+.lm-pfhist-score.neutral{background:var(--ink-100);color:var(--ink-500);}
+.lm-pfhist-go{color:var(--ink-300);flex-shrink:0;}
+
+.lm-pfvocab-wrap{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.lm-pfvocab{display:inline-flex;align-items:baseline;gap:7px;padding:8px 13px;border-radius:12px;background:var(--ink-100);border:1.5px solid transparent;transition:.14s;}
+.lm-pfvocab:hover{transform:translateY(-2px);box-shadow:var(--sh-sm);}
+.lm-pfvocab-w{font-size:17px;font-weight:700;color:var(--ink-900);}
+.lm-pfvocab-r{font-size:11.5px;font-weight:600;color:var(--ink-500);}
+.lm-pfvocab.pv-known{background:var(--ok-100);border-color:color-mix(in srgb,var(--ok-500) 30%,transparent);}
+.lm-pfvocab.pv-known .lm-pfvocab-r{color:var(--ok-500);}
+.lm-pfvocab.pv-learn{background:var(--teal-100);border-color:color-mix(in srgb,var(--teal-500) 30%,transparent);}
+.lm-pfvocab.pv-learn .lm-pfvocab-r{color:var(--teal-700);}
+.lm-pfvocab.pv-review{background:var(--warn-100);border-color:color-mix(in srgb,var(--warn-500) 35%,transparent);}
+.lm-pfvocab.pv-review .lm-pfvocab-r{color:var(--warn-500);}
+.lm-pfvocab-more{font-size:12.5px;font-weight:700;color:var(--ink-500);background:var(--ink-100);padding:8px 13px;border-radius:12px;}
+.lm-pfvocab-legend{display:flex;gap:16px;margin-top:14px;font-size:11.5px;color:var(--ink-500);font-weight:600;}
+.lm-pfvocab-legend span{display:inline-flex;align-items:center;gap:6px;}
+.pv-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.pv-dot.pv-known{background:var(--ok-500);}
+.pv-dot.pv-learn{background:var(--teal-500);}
+.pv-dot.pv-review{background:var(--warn-500);}
+
+/* ---------- responsive ---------- */
+@media(max-width:1080px){
+  .lm-pf-stats{grid-template-columns:1fr 1fr;}
+  .lm-pf-row1,.lm-pf-row2{grid-template-columns:1fr;}
+}
+@media(max-width:620px){
+  .lm-pf-avatar{position:static;margin:-64px auto 0;}
+  .lm-pf-body{flex-direction:column;align-items:center;text-align:center;gap:12px;padding:14px 20px 24px;}
+  .lm-pf-email{justify-content:center;}
+  .lm-pf-badges{justify-content:center;}
+  .lm-pf-actions{width:100%;}
+  .lm-pf-actions .btn{flex:1;}
+  .lm-pf-stats{grid-template-columns:1fr 1fr;}
+  .lm-quick-grid{grid-template-columns:1fr;}
+}
